@@ -14,7 +14,7 @@ dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 app.use(cors({
-  origin: 'https://brilliant-starship-9cd84b.netlify.app/', // Allow requests from React app
+  origin: 'http://localhost:3000', // Allow requests from React app
 }));
 mongoose
   .connect(process.env.MONGO_URL, {
